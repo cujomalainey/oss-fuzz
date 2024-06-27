@@ -34,7 +34,7 @@ RUN pip3 install west
 # this will fail on a new release.
 ARG SDK_VER=0.16.1
 WORKDIR /root
-RUN curl -L -o sdktmp.tar.xz https://github.com/zephyrproject-rtos/sdk-ng/releases/latest/download/zephyr-sdk-${SDK_VER}_linux-x86_64_minimal.tar.xz
+RUN curl -L -o sdktmp.tar.xz https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v${SDK_VER}/zephyr-sdk-${SDK_VER}_linux-x86_64_minimal.tar.xz
 RUN tar xf sdktmp.tar.xz; rm sdktmp.tar.xz
 RUN zephyr-sdk-*/setup.sh -h
 
